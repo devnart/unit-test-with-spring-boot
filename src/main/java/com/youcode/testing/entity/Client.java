@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @RequiredArgsConstructor
+@DynamicUpdate
 public class Client {
     @Id
     @SequenceGenerator(name = "client_seq", sequenceName = "client_seq", allocationSize = 1)

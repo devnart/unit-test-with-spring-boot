@@ -49,4 +49,19 @@ public class ClientController {
     public Optional<Client> getClientByEmail(@PathVariable("email") String email) {
         return clientService.getClientByEmail(email);
     }
+
+    @GetMapping("all/{gender}")
+    public Optional<Client> getClientByGender(@PathVariable("gender") Gender gender) {
+        return clientService.getClientByGender(gender);
+    }
+
+    @DeleteMapping("{id}")
+    public void deleteClient(@PathVariable Long id){
+        clientService.deleteClient(id);
+    }
+
+    @PutMapping("{id}")
+    public void update(@PathVariable Long id, @RequestBody Client client){
+        clientService.updateClient(id,client);
+    }
 }
