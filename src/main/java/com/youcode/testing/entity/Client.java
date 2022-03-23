@@ -2,10 +2,7 @@ package com.youcode.testing.entity;
 
 import com.sun.istack.NotNull;
 import com.youcode.testing.enumeration.Gender;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -18,6 +15,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @RequiredArgsConstructor
+@AllArgsConstructor
 @DynamicUpdate
 public class Client {
     @Id

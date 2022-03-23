@@ -25,7 +25,7 @@ public class ClientController {
 
     @GetMapping
     public Page<Client> getClients(@RequestParam(defaultValue = "0") int page) {
-        logger.info("Clients list");
+        logger.info("get clients list");
         return clientService.getClients(page);
     }
 
