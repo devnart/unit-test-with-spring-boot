@@ -35,11 +35,10 @@ class ClientServiceTest {
     @Mock
     ClientRepository clientRepository;
 
-    Client client = new Client(1L,"a@a.com",123456,"John",23,Gender.MALE,true, LocalDateTime.now(),LocalDateTime.now());
+    Client client = new Client(1L,"a@a.com",123456,"John",23,Gender.MALE,true);
 
     @Test
     void newClient() {
-        Client client = new Client(1L,"a@a.com",123456,"John",23,Gender.MALE,true, LocalDateTime.now(),LocalDateTime.now());
         when(clientRepository.save(client)).thenReturn(client);
         assertEquals(client, clientService.newClient(client));
     }
@@ -53,8 +52,7 @@ class ClientServiceTest {
                 "John",
                 23,
                 Gender.MALE,
-                true,
-                LocalDateTime.now(),LocalDateTime.now());
+                true);
 
         List<Client> list = new ArrayList<>();
         list.add(client);

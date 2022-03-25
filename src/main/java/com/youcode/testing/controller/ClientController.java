@@ -29,6 +29,10 @@ public class ClientController {
         return clientService.getClients(page);
     }
 
+    @GetMapping("/all")
+    public List<Client> allClients() {
+        return clientService.allClients();
+    }
     @PostMapping("/save")
     public void save(@RequestBody Client client){
         clientService.newClient(client);

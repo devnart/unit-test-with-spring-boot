@@ -8,6 +8,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -39,9 +40,9 @@ public class Client {
 
     private Boolean isActive = true;
 
-    @CreationTimestamp
-    private LocalDateTime creationDate;
-
-    @UpdateTimestamp
-    private LocalDateTime lastUpdate;
+//    @CreationTimestamp
+//    private LocalDate creationDate;
+//
+//    @UpdateTimestamp
+//    private LocalDate lastUpdate;
 }
